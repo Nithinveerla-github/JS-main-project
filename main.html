@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Paradise</title>
+    <link rel="stylesheet" href="./main.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- ----------------------CONTACT-US------------------- -->
+   
+        <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+        <script defer src="./main.js"></script>
+        <script src="./products.html"></script>
+    
+    
+</head>
+
+<body>
+    <header>
+        <h1>Furniture Paradise</h1>
+        <img src="https://www.hometown.in/cdn/shop/files/HT-logo1.png?v=1719556324&width=240" height="55px" width="180px">
+        <nav>
+            <a href="#">Sign Up</a>
+            <a href="#">Sign In</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Discover Beautiful Furniture</h2>
+            <p>Transform your space with elegant, inspiring designs.</p>
+            <button onclick="scrollToProducts()">Explore Now</button>
+        </div>
+    </section>
+    <div class="content-container">
+        <h2>CELEBRATING YOUR INDIVIDUALITY</h2>
+        <p>
+            We design premium furniture where comfort is our top priority. Through distinctive designs, 
+            finest materials, and masterful craftsmanship, we are dedicated to offering a seamless 
+            shopping experience that delivers furniture uniquely crafted to reflect your personal style 
+            and fulfill your every need.
+        </p>
+    </div>
+    <img src="https://ik.imagekit.io/2xkwa8s1i/consumer-react/banners/static-common-banner.jpg" alt="Ad Image" class="responsive-image">
+    <!----------------------------------------- product container ---------------------------------------------->
+    <!-- <h1 style="text-align:center; color: #333; font-weight: 600;margin-top: 20px;">Explore Our Furniture Range</h1> -->
+     <h1 class="title">Explore <span class="underline">Our Furniture</span> Range</h1>
+
+
+    <div class="product-container">
+      
+      <!-- Product 1 -->
+      <div class="product-subcontainer product-subcontainer1">
+        <img src="https://homeworkliving.in/cdn/shop/files/1_517276fb-da70-48cc-b78c-c0e86e377a45.png?v=1718341377&width=600" alt="Stylish Sofa">
+        <div class="overlay">
+          <h3>Stylish Sofa</h3>
+          <p>Comfort & Luxury</p>
+          <button class="category-btn" onclick="selectCategory('Sofas')">sofas</button>
+        </div>
+      </div>
+      <div class="product-subcontainer product-subcontainer1">
+        <img src="https://m.media-amazon.com/images/I/71UGv6kvy1L._SY450_.jpg" alt="Stylish Sofa">
+        <div class="overlay">
+          <h3>Stylish Sofa</h3>
+          <p>Comfort & Luxury</p>
+          <button class="category-btn" onclick="selectCategory('Beds')">Beds</button>
+        </div>
+      </div>
+      <div class="product-subcontainer product-subcontainer1">
+        <img src="https://images.squarespace-cdn.com/content/v1/63dde481bbabc6724d988548/b5d6c05e-69b9-4c2b-9822-758030583760/_dcf70b4a-c251-4440-a251-982905248c49.jfif" alt="Stylish Sofa">
+        <div class="overlay">
+          <h3>Stylish Sofa</h3>
+          <p>Comfort & Luxury</p>
+          <button class="category-btn" onclick="selectCategory('Kitchen')">kitchen</button>
+        </div>
+      </div>
+      <div class="product-subcontainer product-subcontainer1">
+        <img src="https://homeworkliving.in/cdn/shop/files/IMG_5996.jpg?v=1693898158&width=800" alt="Stylish Sofa">
+        <div class="overlay">
+          <h3>Stylish Sofa</h3>
+          <p>Comfort & Luxury</p>
+          <button class="category-btn" onclick="selectCategory('TvUnits')">TvUnits</button>
+        </div>
+      </div>
+      <div class="product-subcontainer product-subcontainer1">
+        <img src="https://m.media-amazon.com/images/I/615aajnB6vL.jpg" alt="Stylish Sofa">
+        <div class="overlay">
+          <h3>Stylish Sofa</h3>
+          <button class="category-btn" onclick="selectCategory('DiningSet')">DiningSet</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-subcontainer product-subcontainer2">
+        <img src="https://via.placeholder.com/600x400.png?text=Image+2" alt="Modern Chair">
+        <div class="overlay">
+          <h3>Modern Chair</h3>
+          <p>Ergonomic & Sleek</p>
+          <button class="category-btn" onclick="selectCategory('TvUnits')">TvUnits</button>
+        </div>
+      </div>
+  
+      <!-- Product 3 -->
+      <div class="product-subcontainer product-subcontainer3">
+        <img src="" alt="Minimal Desk">
+        <div class="overlay">
+          <h3>Minimal Desk</h3>
+          <p>Simple & Elegant</p>
+          <button class="category-btn" onclick="selectCategory('Beds')">Beds</button>
+        </div>
+      </div>
+  
+      <!-- Product 4 -->
+      <div class="product-subcontainer product-subcontainer4">
+        <img src="https://images.durian.in/Durian/durian/product/800x800/202031673069058.jpg?tr=w-1200,q-100,lo-true" alt="Cozy Lounge">
+        <div class="overlay">
+          <h3>Cozy Lounge</h3>
+          <p>Perfect for Relaxing</p>
+          <button class="category-btn" onclick="selectCategory('Beds')">Beds</button>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+
+   
+    <img src="https://tpc.googlesyndication.com/simgad/556365645289742419" alt="Ad Image" class="responsive-image">
+
+    <!-- image container -->
+    <div class="image-container">
+        <div class="sub-image-container" id="sub-image-container1" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="content">
+                <h2>Living Room Furniture</h2>
+                <p class="important-content">Create a cozy and stylish space with premium quality sofas, coffee tables, entertainment units, and more.</p>
+                <p class="p">Enhance the heart of your home with elegant and functional furniture. Our collection includes modern, classic, and luxurious pieces that blend comfort and style.</p>
+                <a href="#" class="explore-btn" onclick="selectCategory('sofa')">Explore</a>
+            </div>
+            <img src="https://img.interiorcompany.com/interior/webproduct/673638722434469849488.png?aio=w-1200;" alt="Living Room Furniture">
+        </div>
+        <div class="sub-image-container" id="sub-image-container2" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+           
+            <img src="https://img.interiorcompany.com/interior/webproduct/967638664261869745359.png?aio=w-1200;" alt="Master Bedroom Furniture">
+            <div class="content">
+              <h2>Master Bedroom Furniture</h2>
+              <p class="important-content">Experience comfort and relaxation with high-quality beds, wardrobes, and nightstands.</p>
+              <p class="p">Transform your bedroom into a peaceful retreat with our sophisticated furniture collection. Choose from a variety of styles to match your personal taste and needs.</p>
+              <a href="#" class="explore-btn" onclick="selectCategory('beds')">Explore</a>
+          </div>
+          </div>
+        <div class="sub-image-container" id="sub-image-container3" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="content">
+                <h2>Kids' Room Furniture</h2>
+                <p class="important-content">Design a playful and organized space with bunk beds, study tables, and storage units.</p>
+                <p class="price">Give your kids a fun and comfortable environment with our durable and creative furniture solutions. Safe, stylish, and practical for growing minds.</p>
+                <a href="#" class="explore-btn" onclick="selectCategory('beds')">Explore</a>
+            </div>
+            <img src="https://img.interiorcompany.com/interior/webproduct/334637886431014146210.jpg?aio=w-1200;" alt="Kids Room Furniture">
+        </div>
+        <div class="sub-image-container" id="sub-image-container4" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+           
+            <img src="https://img.interiorcompany.com/interior/webproduct/425638590712909348704.png?aio=w-1200;" alt="Kitchen and Dining Furniture">
+            <div class="content">
+              <h2>Kitchen & Dining Furniture</h2>
+              <p class="important-content">Upgrade your kitchen and dining experience with stylish tables, chairs, and cabinets.</p>
+              <p class="p">From spacious dining sets to compact solutions, our furniture enhances functionality and aesthetic appeal, making every meal special.</p>
+              <a href="#" class="explore-btn" onclick="selectCategory('Kitchen set')">Explore</a>
+          </div>
+          </div>
+        <div class="sub-image-container" id="sub-image-container5" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+            <div class="content">
+                <h2>Outdoor & Patio Furniture</h2>
+                <p class="important-content">Enjoy nature with durable and comfortable garden chairs, tables, and loungers.</p>
+                <p class="p">Turn your backyard into a serene escape with weather-resistant, stylish, and functional outdoor furniture built for all seasons.</p>
+                <a href="#" class="explore-btn">Explore</a>
+            </div>
+            <img src="https://img.interiorcompany.com/interior/webproduct/180638573304728844018.png?aio=w-1200;" alt="Outdoor and Patio Furniture">
+        </div>
+    </div>
+    <!----------------------------------------------------- rating containers -->
+    <!-------------------------------------------------------Rating profiles ----------------------------------------------------->
+    <div class="wrapper">
+        <div class="contact-container">
+            <h2 class="contact-us">Contact Us</h2>
+            <div class="contact-grid">
+                <!-- Left Section: Contact Info -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2390/2390589.png" alt="Location">
+                        <div>
+                            <h3>Our Office Address</h3>
+                            <p>Hitech city,Near shivaji maharaj street, Hyderabad-400064,</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://e7.pngegg.com/pngimages/904/903/png-clipart-computer-icons-email-message-text-messaging-symbol-email-miscellaneous-angle-thumbnail.png" alt="Email">
+                        <div>
+                            <h3>General Enquiries</h3>
+                            <p>support@justdial.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://thumbs.dreamstime.com/b/phone-flat-icon-call-symbol-phone-call-sign-phone-yellow-icon-call-symbol-isolated-white-vector-phone-yellow-icon-352169517.jpg" alt="Call">
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91-8888888888</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <img src="https://png.pngtree.com/png-clipart/20220729/original/pngtree-alarm-clock-yellow-icon-png-image_8423938.png" alt="Timing">
+                        <div>
+                            <h3>Our Timing</h3>
+                            <p>Mon-Sun: 10AM - 7PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: Contact Form -->
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Your Contact No." required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <div style="display: grid; place-items: center; width: 100%;">
+                        <button type="submit">Submit</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/main.js"></script>
+   <script src="./main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+
